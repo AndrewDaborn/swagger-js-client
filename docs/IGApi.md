@@ -1,6 +1,6 @@
 # Reporting.IGApi
 
-All URIs are relative to *http://localhost:10500/v1*
+All URIs are relative to *http://localhost:10210/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,24 +18,21 @@ Retrieves the list of matches for a chosen document
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.IGApi();
+let apiInstance = new Reporting.IGApi();
 
-var id = 56; // Number | The document id to get matches for
+let id = 56; // Number | The document id to get matches for
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example" // String | 
 };
+apiInstance.igDocumentsIdMatchesGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.igDocumentsIdMatchesGet(id, opts, callback);
 ```
 
 ### Parameters
@@ -60,7 +57,7 @@ No authorization required
 
 <a name="igUsersIdActiveDocumentsGet"></a>
 # **igUsersIdActiveDocumentsGet**
-> [DocumentActivity] igUsersIdActiveDocumentsGet(id, opts)
+> [ActiveDocument] igUsersIdActiveDocumentsGet(id, opts)
 
 
 
@@ -68,24 +65,21 @@ Retrieves document activity for a specific user&#39;s registered documents
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.IGApi();
+let apiInstance = new Reporting.IGApi();
 
-var id = 56; // Number | User to select documents for
+let id = 56; // Number | User to select documents for
 
-var opts = { 
+let opts = { 
   'authorization': "authorization_example" // String | 
 };
+apiInstance.igUsersIdActiveDocumentsGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.igUsersIdActiveDocumentsGet(id, opts, callback);
 ```
 
 ### Parameters
@@ -97,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[DocumentActivity]**](DocumentActivity.md)
+[**[ActiveDocument]**](ActiveDocument.md)
 
 ### Authorization
 

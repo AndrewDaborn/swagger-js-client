@@ -1,6 +1,6 @@
 # Reporting.AuthenticationApi
 
-All URIs are relative to *http://localhost:10500/v1*
+All URIs are relative to *http://localhost:10210/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,21 +17,18 @@ Create a session for a user
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.AuthenticationApi();
+let apiInstance = new Reporting.AuthenticationApi();
 
-var credentials = new Reporting.Credentials(); // Credentials | Credentials to authenticate
+let credentials = new Reporting.Credentials(); // Credentials | Credentials to authenticate
 
+apiInstance.sessionPost(credentials).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.sessionPost(credentials, callback);
 ```
 
 ### Parameters

@@ -1,6 +1,6 @@
 # Reporting.ServiceCheckApi
 
-All URIs are relative to *http://localhost:10500/v1*
+All URIs are relative to *http://localhost:10210/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,18 +17,15 @@ Check the health of the service and dependent components
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.ServiceCheckApi();
+let apiInstance = new Reporting.ServiceCheckApi();
+apiInstance.servicecheckGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.servicecheckGet(callback);
 ```
 
 ### Parameters

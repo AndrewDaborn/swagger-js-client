@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **action** | **String** |  | [optional] 
 **transferMode** | **String** |  | [optional] 
 **direction** | **String** |  | [optional] 
+**sourceName** | **String** |  | [optional] 
 
 
