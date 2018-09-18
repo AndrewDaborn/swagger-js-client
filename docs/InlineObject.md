@@ -1,4 +1,4 @@
-# Reporting.Credentials
+# Reporting.InlineObject
 
 ## Properties
 Name | Type | Description | Notes

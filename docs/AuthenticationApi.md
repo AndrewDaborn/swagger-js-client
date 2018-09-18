@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="sessionPost"></a>
 # **sessionPost**
-> JwtToken sessionPost(credentials)
+> JwtToken sessionPost(opts)
 
 
 
@@ -17,15 +17,15 @@ Create a session for a user
 
 ### Example
 ```javascript
-import Reporting from 'reporting';
+var Reporting = require('reporting');
 
-let apiInstance = new Reporting.AuthenticationApi();
-
-let credentials = new Reporting.Credentials(); // Credentials | Credentials to authenticate
-
-apiInstance.sessionPost(credentials).then((data) => {
+var apiInstance = new Reporting.AuthenticationApi();
+var opts = {
+  'inlineObject': new Reporting.InlineObject() // InlineObject | 
+};
+apiInstance.sessionPost(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -35,7 +35,7 @@ apiInstance.sessionPost(credentials).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credentials** | [**Credentials**](Credentials.md)| Credentials to authenticate | 
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
 

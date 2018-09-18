@@ -25,7 +25,7 @@
     if (!root.Reporting) {
       root.Reporting = {};
     }
-    root.Reporting.JwtToken = factory(root.Reporting.ApiClient);
+    root.Reporting.InlineObject = factory(root.Reporting.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,44 +34,54 @@
 
 
   /**
-   * The JwtToken model module.
-   * @module model/JwtToken
+   * The InlineObject model module.
+   * @module model/InlineObject
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>JwtToken</code>.
-   * @alias module:model/JwtToken
+   * Constructs a new <code>InlineObject</code>.
+   * @alias module:model/InlineObject
    * @class
+   * @param username {String} 
+   * @param password {String} 
    */
-  var exports = function() {
+  var exports = function(username, password) {
     var _this = this;
 
-
+    _this['username'] = username;
+    _this['password'] = password;
   };
 
   /**
-   * Constructs a <code>JwtToken</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InlineObject</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/JwtToken} obj Optional instance to populate.
-   * @return {module:model/JwtToken} The populated <code>JwtToken</code> instance.
+   * @param {module:model/InlineObject} obj Optional instance to populate.
+   * @return {module:model/InlineObject} The populated <code>InlineObject</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('token')) {
-        obj['token'] = ApiClient.convertToType(data['token'], 'String');
+      if (data.hasOwnProperty('username')) {
+        obj['username'] = ApiClient.convertToType(data['username'], 'String');
+      }
+      if (data.hasOwnProperty('password')) {
+        obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} token
+   * @member {String} username
    */
-  exports.prototype['token'] = undefined;
+  exports.prototype['username'] = undefined;
+  /**
+   * @member {String} password
+   */
+  exports.prototype['password'] = undefined;
 
 
 

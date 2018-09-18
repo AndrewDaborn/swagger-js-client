@@ -18,18 +18,16 @@ Retrieves the list of matches for a chosen document
 
 ### Example
 ```javascript
-import Reporting from 'reporting';
+var Reporting = require('reporting');
 
-let apiInstance = new Reporting.IGApi();
-
-let id = 56; // Number | The document id to get matches for
-
-let opts = { 
+var apiInstance = new Reporting.IGApi();
+var id = 56; // Number | The document id to get matches for
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.igDocumentsIdMatchesGet(id, opts).then((data) => {
+apiInstance.igDocumentsIdMatchesGet(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
@@ -65,18 +63,16 @@ Retrieves document activity for a specific user&#39;s registered documents
 
 ### Example
 ```javascript
-import Reporting from 'reporting';
+var Reporting = require('reporting');
 
-let apiInstance = new Reporting.IGApi();
-
-let id = 56; // Number | User to select documents for
-
-let opts = { 
+var apiInstance = new Reporting.IGApi();
+var id = 56; // Number | User to select documents for
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.igUsersIdActiveDocumentsGet(id, opts).then((data) => {
+apiInstance.igUsersIdActiveDocumentsGet(id, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 

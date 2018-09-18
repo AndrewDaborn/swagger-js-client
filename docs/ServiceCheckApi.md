@@ -17,12 +17,12 @@ Check the health of the service and dependent components
 
 ### Example
 ```javascript
-import Reporting from 'reporting';
+var Reporting = require('reporting');
 
-let apiInstance = new Reporting.ServiceCheckApi();
-apiInstance.servicecheckGet().then((data) => {
+var apiInstance = new Reporting.ServiceCheckApi();
+apiInstance.servicecheckGet().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
+}, function(error) {
   console.error(error);
 });
 
