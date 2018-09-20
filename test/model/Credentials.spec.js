@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Reporting.DocumentFilter();
+    instance = new Reporting.Credentials();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,22 @@
       object[property] = value;
   }
 
-  describe('DocumentFilter', function() {
-    it('should create an instance of DocumentFilter', function() {
-      // uncomment below and update the code to test DocumentFilter
-      //var instane = new Reporting.DocumentFilter();
-      //expect(instance).to.be.a(Reporting.DocumentFilter);
+  describe('Credentials', function() {
+    it('should create an instance of Credentials', function() {
+      // uncomment below and update the code to test Credentials
+      //var instane = new Reporting.Credentials();
+      //expect(instance).to.be.a(Reporting.Credentials);
     });
 
-    it('should have the property documentName (base name: "documentName")', function() {
-      // uncomment below and update the code to test the property documentName
-      //var instane = new Reporting.DocumentFilter();
+    it('should have the property username (base name: "username")', function() {
+      // uncomment below and update the code to test the property username
+      //var instane = new Reporting.Credentials();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property password (base name: "password")', function() {
+      // uncomment below and update the code to test the property password
+      //var instane = new Reporting.Credentials();
       //expect(instance).to.be();
     });
 

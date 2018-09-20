@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The UserDetail model module.
- * @module model/UserDetail
+ * The DocumentsByUser model module.
+ * @module model/DocumentsByUser
  * @version 1.0.0
  */
-class UserDetail {
+class DocumentsByUser {
     /**
-     * Constructs a new <code>UserDetail</code>.
-     * @alias module:model/UserDetail
+     * Constructs a new <code>DocumentsByUser</code>.
+     * @alias module:model/DocumentsByUser
      */
     constructor() { 
         
-        UserDetail.initialize(this);
+        DocumentsByUser.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class UserDetail {
     }
 
     /**
-     * Constructs a <code>UserDetail</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DocumentsByUser</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/UserDetail} obj Optional instance to populate.
-     * @return {module:model/UserDetail} The populated <code>UserDetail</code> instance.
+     * @param {module:model/DocumentsByUser} obj Optional instance to populate.
+     * @return {module:model/DocumentsByUser} The populated <code>DocumentsByUser</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new UserDetail();
+            obj = obj || new DocumentsByUser();
 
             if (data.hasOwnProperty('displayName')) {
                 obj['displayName'] = ApiClient.convertToType(data['displayName'], 'String');
@@ -59,8 +59,8 @@ class UserDetail {
             if (data.hasOwnProperty('role')) {
                 obj['role'] = ApiClient.convertToType(data['role'], 'String');
             }
-            if (data.hasOwnProperty('documentName')) {
-                obj['documentName'] = ApiClient.convertToType(data['documentName'], 'String');
+            if (data.hasOwnProperty('documents')) {
+                obj['documents'] = ApiClient.convertToType(data['documents'], ['String']);
             }
         }
         return obj;
@@ -72,32 +72,32 @@ class UserDetail {
 /**
  * @member {String} displayName
  */
-UserDetail.prototype['displayName'] = undefined;
+DocumentsByUser.prototype['displayName'] = undefined;
 
 /**
  * @member {String} email
  */
-UserDetail.prototype['email'] = undefined;
+DocumentsByUser.prototype['email'] = undefined;
 
 /**
  * @member {String} upn
  */
-UserDetail.prototype['upn'] = undefined;
+DocumentsByUser.prototype['upn'] = undefined;
 
 /**
  * @member {String} role
  */
-UserDetail.prototype['role'] = undefined;
+DocumentsByUser.prototype['role'] = undefined;
 
 /**
- * @member {String} documentName
+ * @member {Array.<String>} documents
  */
-UserDetail.prototype['documentName'] = undefined;
+DocumentsByUser.prototype['documents'] = undefined;
 
 
 
 
 
 
-export default UserDetail;
+export default DocumentsByUser;
 

@@ -14,20 +14,20 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The InlineObject model module.
- * @module model/InlineObject
+ * The Credentials model module.
+ * @module model/Credentials
  * @version 1.0.0
  */
-class InlineObject {
+class Credentials {
     /**
-     * Constructs a new <code>InlineObject</code>.
-     * @alias module:model/InlineObject
+     * Constructs a new <code>Credentials</code>.
+     * @alias module:model/Credentials
      * @param username {String} 
      * @param password {String} 
      */
     constructor(username, password) { 
         
-        InlineObject.initialize(this, username, password);
+        Credentials.initialize(this, username, password);
     }
 
     /**
@@ -41,15 +41,15 @@ class InlineObject {
     }
 
     /**
-     * Constructs a <code>InlineObject</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>Credentials</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineObject} obj Optional instance to populate.
-     * @return {module:model/InlineObject} The populated <code>InlineObject</code> instance.
+     * @param {module:model/Credentials} obj Optional instance to populate.
+     * @return {module:model/Credentials} The populated <code>Credentials</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineObject();
+            obj = obj || new Credentials();
 
             if (data.hasOwnProperty('username')) {
                 obj['username'] = ApiClient.convertToType(data['username'], 'String');
@@ -67,17 +67,17 @@ class InlineObject {
 /**
  * @member {String} username
  */
-InlineObject.prototype['username'] = undefined;
+Credentials.prototype['username'] = undefined;
 
 /**
  * @member {String} password
  */
-InlineObject.prototype['password'] = undefined;
+Credentials.prototype['password'] = undefined;
 
 
 
 
 
 
-export default InlineObject;
+export default Credentials;
 

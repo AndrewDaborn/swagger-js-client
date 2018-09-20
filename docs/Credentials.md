@@ -1,8 +1,9 @@
-# Reporting.DocumentFilter
+# Reporting.Credentials
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**documentName** | **String** |  | [optional] 
+**username** | **String** |  | 
+**password** | **String** |  | 
 
 

@@ -1,9 +1,8 @@
-# Reporting.InlineObject
+# Reporting.IgFilter
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **String** |  | 
-**password** | **String** |  | 
+**documentName** | **String** |  | [optional] 
 
 

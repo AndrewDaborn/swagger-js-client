@@ -4,10 +4,55 @@ All URIs are relative to *http://localhost:10210/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**igDocumentsByUserPost**](IGApi.md#igDocumentsByUserPost) | **POST** /ig/documentsByUser | 
 [**igDocumentsIdMatchesGet**](IGApi.md#igDocumentsIdMatchesGet) | **GET** /ig/documents/{id}/matches | 
 [**igDocumentsPost**](IGApi.md#igDocumentsPost) | **POST** /ig/documents | 
+[**igMatchesPost**](IGApi.md#igMatchesPost) | **POST** /ig/matches | 
 [**igUsersIdActiveDocumentsGet**](IGApi.md#igUsersIdActiveDocumentsGet) | **GET** /ig/users/{id}/activeDocuments | 
 
+
+<a name="igDocumentsByUserPost"></a>
+# **igDocumentsByUserPost**
+> [DocumentsByUser] igDocumentsByUserPost(opts)
+
+
+
+### Example
+```javascript
+import Reporting from 'reporting';
+
+let apiInstance = new Reporting.IGApi();
+let opts = {
+  'authorization': "authorization_example", // String | 
+  'igFilter': new Reporting.IgFilter() // IgFilter | Provides filters for querying documents by user
+};
+apiInstance.igDocumentsByUserPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
+ **igFilter** | [**IgFilter**](IgFilter.md)| Provides filters for querying documents by user | [optional] 
+
+### Return type
+
+[**[DocumentsByUser]**](DocumentsByUser.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a name="igDocumentsIdMatchesGet"></a>
 # **igDocumentsIdMatchesGet**
@@ -56,7 +101,7 @@ No authorization required
 
 <a name="igDocumentsPost"></a>
 # **igDocumentsPost**
-> [DocumentDetail] igDocumentsPost(opts)
+> [RegisteredDocument] igDocumentsPost(opts)
 
 
 
@@ -67,7 +112,7 @@ import Reporting from 'reporting';
 let apiInstance = new Reporting.IGApi();
 let opts = {
   'authorization': "authorization_example", // String | 
-  'documentFilter': new Reporting.DocumentFilter() // DocumentFilter | Provides filters for querying documents
+  'igFilter': new Reporting.IgFilter() // IgFilter | Provides filters for querying documents
 };
 apiInstance.igDocumentsPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -82,11 +127,54 @@ apiInstance.igDocumentsPost(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **String**|  | [optional] 
- **documentFilter** | [**DocumentFilter**](DocumentFilter.md)| Provides filters for querying documents | [optional] 
+ **igFilter** | [**IgFilter**](IgFilter.md)| Provides filters for querying documents | [optional] 
 
 ### Return type
 
-[**[DocumentDetail]**](DocumentDetail.md)
+[**[RegisteredDocument]**](RegisteredDocument.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="igMatchesPost"></a>
+# **igMatchesPost**
+> [DocumentMatch] igMatchesPost(opts)
+
+
+
+### Example
+```javascript
+import Reporting from 'reporting';
+
+let apiInstance = new Reporting.IGApi();
+let opts = {
+  'authorization': "authorization_example", // String | 
+  'igFilter': new Reporting.IgFilter() // IgFilter | Provides filters for querying document matches
+};
+apiInstance.igMatchesPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
+ **igFilter** | [**IgFilter**](IgFilter.md)| Provides filters for querying document matches | [optional] 
+
+### Return type
+
+[**[DocumentMatch]**](DocumentMatch.md)
 
 ### Authorization
 

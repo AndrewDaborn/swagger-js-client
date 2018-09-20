@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The DocumentFilter model module.
- * @module model/DocumentFilter
+ * The IgFilter model module.
+ * @module model/IgFilter
  * @version 1.0.0
  */
-class DocumentFilter {
+class IgFilter {
     /**
-     * Constructs a new <code>DocumentFilter</code>.
-     * @alias module:model/DocumentFilter
+     * Constructs a new <code>IgFilter</code>.
+     * @alias module:model/IgFilter
      */
     constructor() { 
         
-        DocumentFilter.initialize(this);
+        IgFilter.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class DocumentFilter {
     }
 
     /**
-     * Constructs a <code>DocumentFilter</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>IgFilter</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/DocumentFilter} obj Optional instance to populate.
-     * @return {module:model/DocumentFilter} The populated <code>DocumentFilter</code> instance.
+     * @param {module:model/IgFilter} obj Optional instance to populate.
+     * @return {module:model/IgFilter} The populated <code>IgFilter</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new DocumentFilter();
+            obj = obj || new IgFilter();
 
             if (data.hasOwnProperty('documentName')) {
                 obj['documentName'] = ApiClient.convertToType(data['documentName'], 'String');
@@ -60,12 +60,12 @@ class DocumentFilter {
 /**
  * @member {String} documentName
  */
-DocumentFilter.prototype['documentName'] = undefined;
+IgFilter.prototype['documentName'] = undefined;
 
 
 
 
 
 
-export default DocumentFilter;
+export default IgFilter;
 

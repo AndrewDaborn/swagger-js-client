@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Reporting.DocumentDetail();
+    instance = new Reporting.IgFilter();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('DocumentDetail', function() {
-    it('should create an instance of DocumentDetail', function() {
-      // uncomment below and update the code to test DocumentDetail
-      //var instane = new Reporting.DocumentDetail();
-      //expect(instance).to.be.a(Reporting.DocumentDetail);
+  describe('IgFilter', function() {
+    it('should create an instance of IgFilter', function() {
+      // uncomment below and update the code to test IgFilter
+      //var instane = new Reporting.IgFilter();
+      //expect(instance).to.be.a(Reporting.IgFilter);
     });
 
-    it('should have the property registeredDocument (base name: "registeredDocument")', function() {
-      // uncomment below and update the code to test the property registeredDocument
-      //var instane = new Reporting.DocumentDetail();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property documentMatches (base name: "documentMatches")', function() {
-      // uncomment below and update the code to test the property documentMatches
-      //var instane = new Reporting.DocumentDetail();
+    it('should have the property documentName (base name: "documentName")', function() {
+      // uncomment below and update the code to test the property documentName
+      //var instane = new Reporting.IgFilter();
       //expect(instance).to.be();
     });
 

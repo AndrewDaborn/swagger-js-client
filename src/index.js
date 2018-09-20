@@ -13,16 +13,15 @@
 
 
 import ApiClient from './ApiClient';
-import DocumentDetail from './model/DocumentDetail';
-import DocumentFilter from './model/DocumentFilter';
+import Credentials from './model/Credentials';
 import DocumentMatch from './model/DocumentMatch';
-import InlineObject from './model/InlineObject';
+import DocumentsByUser from './model/DocumentsByUser';
+import IgFilter from './model/IgFilter';
 import JwtToken from './model/JwtToken';
 import MatchType from './model/MatchType';
 import RegisteredDocument from './model/RegisteredDocument';
 import ServiceStatus from './model/ServiceStatus';
 import Status from './model/Status';
-import UserDetail from './model/UserDetail';
 import AuthenticationApi from './api/AuthenticationApi';
 import IGApi from './api/IGApi';
 import ServiceCheckApi from './api/ServiceCheckApi';
@@ -67,16 +66,10 @@ export {
     ApiClient,
 
     /**
-     * The DocumentDetail model constructor.
-     * @property {module:model/DocumentDetail}
+     * The Credentials model constructor.
+     * @property {module:model/Credentials}
      */
-    DocumentDetail,
-
-    /**
-     * The DocumentFilter model constructor.
-     * @property {module:model/DocumentFilter}
-     */
-    DocumentFilter,
+    Credentials,
 
     /**
      * The DocumentMatch model constructor.
@@ -85,10 +78,16 @@ export {
     DocumentMatch,
 
     /**
-     * The InlineObject model constructor.
-     * @property {module:model/InlineObject}
+     * The DocumentsByUser model constructor.
+     * @property {module:model/DocumentsByUser}
      */
-    InlineObject,
+    DocumentsByUser,
+
+    /**
+     * The IgFilter model constructor.
+     * @property {module:model/IgFilter}
+     */
+    IgFilter,
 
     /**
      * The JwtToken model constructor.
@@ -119,12 +118,6 @@ export {
      * @property {module:model/Status}
      */
     Status,
-
-    /**
-     * The UserDetail model constructor.
-     * @property {module:model/UserDetail}
-     */
-    UserDetail,
 
     /**
     * The AuthenticationApi service constructor.

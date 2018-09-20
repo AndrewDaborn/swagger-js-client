@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="sessionPost"></a>
 # **sessionPost**
-> JwtToken sessionPost(opts)
+> JwtToken sessionPost(credentials)
 
 
 
@@ -20,10 +20,8 @@ Create a session for a user
 import Reporting from 'reporting';
 
 let apiInstance = new Reporting.AuthenticationApi();
-let opts = {
-  'inlineObject': new Reporting.InlineObject() // InlineObject | 
-};
-apiInstance.sessionPost(opts).then((data) => {
+let credentials = new Reporting.Credentials(); // Credentials | Credentials to authenticate
+apiInstance.sessionPost(credentials).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -35,7 +33,7 @@ apiInstance.sessionPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
+ **credentials** | [**Credentials**](Credentials.md)| Credentials to authenticate | 
 
 ### Return type
 

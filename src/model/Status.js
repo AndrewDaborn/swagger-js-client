@@ -18,22 +18,23 @@ import ApiClient from '../ApiClient';
 * @readonly
 */
 export default class Status {
+    constructor(){
     
         /**
          * value: "HEALTHY"
          * @const
          */
-        "HEALTHY" = "HEALTHY";
+        this.HEALTHY = "HEALTHY";
 
     
         /**
          * value: "UNHEALTHY"
          * @const
          */
-        "UNHEALTHY" = "UNHEALTHY";
+        this.UNHEALTHY = "UNHEALTHY";
 
     
-
+    }
     /**
     * Returns a <code>Status</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.

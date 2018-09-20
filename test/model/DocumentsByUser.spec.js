@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Reporting.UserDetail();
+    instance = new Reporting.DocumentsByUser();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,40 @@
       object[property] = value;
   }
 
-  describe('UserDetail', function() {
-    it('should create an instance of UserDetail', function() {
-      // uncomment below and update the code to test UserDetail
-      //var instane = new Reporting.UserDetail();
-      //expect(instance).to.be.a(Reporting.UserDetail);
+  describe('DocumentsByUser', function() {
+    it('should create an instance of DocumentsByUser', function() {
+      // uncomment below and update the code to test DocumentsByUser
+      //var instane = new Reporting.DocumentsByUser();
+      //expect(instance).to.be.a(Reporting.DocumentsByUser);
     });
 
     it('should have the property displayName (base name: "displayName")', function() {
       // uncomment below and update the code to test the property displayName
-      //var instane = new Reporting.UserDetail();
+      //var instane = new Reporting.DocumentsByUser();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new Reporting.UserDetail();
+      //var instane = new Reporting.DocumentsByUser();
       //expect(instance).to.be();
     });
 
     it('should have the property upn (base name: "upn")', function() {
       // uncomment below and update the code to test the property upn
-      //var instane = new Reporting.UserDetail();
+      //var instane = new Reporting.DocumentsByUser();
       //expect(instance).to.be();
     });
 
     it('should have the property role (base name: "role")', function() {
       // uncomment below and update the code to test the property role
-      //var instane = new Reporting.UserDetail();
+      //var instane = new Reporting.DocumentsByUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property documentName (base name: "documentName")', function() {
-      // uncomment below and update the code to test the property documentName
-      //var instane = new Reporting.UserDetail();
+    it('should have the property documents (base name: "documents")', function() {
+      // uncomment below and update the code to test the property documents
+      //var instane = new Reporting.DocumentsByUser();
       //expect(instance).to.be();
     });
 

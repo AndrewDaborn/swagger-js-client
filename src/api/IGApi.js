@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import DocumentDetail from '../model/DocumentDetail';
-import DocumentFilter from '../model/DocumentFilter';
 import DocumentMatch from '../model/DocumentMatch';
+import DocumentsByUser from '../model/DocumentsByUser';
+import IgFilter from '../model/IgFilter';
 import RegisteredDocument from '../model/RegisteredDocument';
 
 /**
@@ -36,6 +36,53 @@ export default class IGApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/IgFilter} opts.igFilter Provides filters for querying documents by user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/DocumentsByUser>} and HTTP response
+     */
+    igDocumentsByUserPostWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['igFilter'];
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': opts['authorization']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [DocumentsByUser];
+
+      return this.apiClient.callApi(
+        '/ig/documentsByUser', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/IgFilter} opts.igFilter Provides filters for querying documents by user
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/DocumentsByUser>}
+     */
+    igDocumentsByUserPost(opts) {
+      return this.igDocumentsByUserPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**
@@ -96,12 +143,12 @@ export default class IGApi {
     /**
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @param {module:model/DocumentFilter} opts.documentFilter Provides filters for querying documents
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/DocumentDetail>} and HTTP response
+     * @param {module:model/IgFilter} opts.igFilter Provides filters for querying documents
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/RegisteredDocument>} and HTTP response
      */
     igDocumentsPostWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['documentFilter'];
+      let postBody = opts['igFilter'];
 
 
       let pathParams = {
@@ -117,7 +164,7 @@ export default class IGApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [DocumentDetail];
+      let returnType = [RegisteredDocument];
 
       return this.apiClient.callApi(
         '/ig/documents', 'POST',
@@ -129,11 +176,58 @@ export default class IGApi {
     /**
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @param {module:model/DocumentFilter} opts.documentFilter Provides filters for querying documents
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/DocumentDetail>}
+     * @param {module:model/IgFilter} opts.igFilter Provides filters for querying documents
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/RegisteredDocument>}
      */
     igDocumentsPost(opts) {
       return this.igDocumentsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/IgFilter} opts.igFilter Provides filters for querying document matches
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/DocumentMatch>} and HTTP response
+     */
+    igMatchesPostWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['igFilter'];
+
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'Authorization': opts['authorization']
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [DocumentMatch];
+
+      return this.apiClient.callApi(
+        '/ig/matches', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/IgFilter} opts.igFilter Provides filters for querying document matches
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/DocumentMatch>}
+     */
+    igMatchesPost(opts) {
+      return this.igMatchesPostWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

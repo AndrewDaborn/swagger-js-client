@@ -18,22 +18,23 @@ import ApiClient from '../ApiClient';
 * @readonly
 */
 export default class MatchType {
+    constructor(){
     
         /**
          * value: "FULL"
          * @const
          */
-        "FULL" = "FULL";
+        this.FULL = "FULL";
 
     
         /**
          * value: "PARTIAL"
          * @const
          */
-        "PARTIAL" = "PARTIAL";
+        this.PARTIAL = "PARTIAL";
 
     
-
+    }
     /**
     * Returns a <code>MatchType</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.

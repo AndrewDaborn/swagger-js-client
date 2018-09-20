@@ -48,6 +48,16 @@
   }
 
   describe('IGApi', function() {
+    describe('igDocumentsByUserPost', function() {
+      it('should call igDocumentsByUserPost successfully', function(done) {
+        //uncomment below and update the code to test igDocumentsByUserPost
+        //instance.igDocumentsByUserPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('igDocumentsIdMatchesGet', function() {
       it('should call igDocumentsIdMatchesGet successfully', function(done) {
         //uncomment below and update the code to test igDocumentsIdMatchesGet
@@ -62,6 +72,16 @@
       it('should call igDocumentsPost successfully', function(done) {
         //uncomment below and update the code to test igDocumentsPost
         //instance.igDocumentsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('igMatchesPost', function() {
+      it('should call igMatchesPost successfully', function(done) {
+        //uncomment below and update the code to test igMatchesPost
+        //instance.igMatchesPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

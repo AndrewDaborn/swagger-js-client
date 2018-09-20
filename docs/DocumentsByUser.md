@@ -1,4 +1,4 @@
-# Reporting.UserDetail
+# Reporting.DocumentsByUser
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **upn** | **String** |  | [optional] 
 **role** | **String** |  | [optional] 
-**documentName** | **String** |  | [optional] 
+**documents** | **[String]** |  | [optional] 
 
 

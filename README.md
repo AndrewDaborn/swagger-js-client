@@ -72,10 +72,8 @@ var Reporting = require('reporting');
 
 
 var api = new Reporting.AuthenticationApi()
-var opts = {
-  'inlineObject': new Reporting.InlineObject() // {InlineObject} 
-};
-api.sessionPost(opts).then(function(data) {
+var credentials = new Reporting.Credentials(); // {Credentials} Credentials to authenticate
+api.sessionPost(credentials).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -91,24 +89,25 @@ All URIs are relative to *http://localhost:10210/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Reporting.AuthenticationApi* | [**sessionPost**](docs/AuthenticationApi.md#sessionPost) | **POST** /session | 
+*Reporting.IGApi* | [**igDocumentsByUserPost**](docs/IGApi.md#igDocumentsByUserPost) | **POST** /ig/documentsByUser | 
 *Reporting.IGApi* | [**igDocumentsIdMatchesGet**](docs/IGApi.md#igDocumentsIdMatchesGet) | **GET** /ig/documents/{id}/matches | 
 *Reporting.IGApi* | [**igDocumentsPost**](docs/IGApi.md#igDocumentsPost) | **POST** /ig/documents | 
+*Reporting.IGApi* | [**igMatchesPost**](docs/IGApi.md#igMatchesPost) | **POST** /ig/matches | 
 *Reporting.IGApi* | [**igUsersIdActiveDocumentsGet**](docs/IGApi.md#igUsersIdActiveDocumentsGet) | **GET** /ig/users/{id}/activeDocuments | 
 *Reporting.ServiceCheckApi* | [**servicecheckGet**](docs/ServiceCheckApi.md#servicecheckGet) | **GET** /servicecheck | 
 
 
 ## Documentation for Models
 
- - [Reporting.DocumentDetail](docs/DocumentDetail.md)
- - [Reporting.DocumentFilter](docs/DocumentFilter.md)
+ - [Reporting.Credentials](docs/Credentials.md)
  - [Reporting.DocumentMatch](docs/DocumentMatch.md)
- - [Reporting.InlineObject](docs/InlineObject.md)
+ - [Reporting.DocumentsByUser](docs/DocumentsByUser.md)
+ - [Reporting.IgFilter](docs/IgFilter.md)
  - [Reporting.JwtToken](docs/JwtToken.md)
  - [Reporting.MatchType](docs/MatchType.md)
  - [Reporting.RegisteredDocument](docs/RegisteredDocument.md)
  - [Reporting.ServiceStatus](docs/ServiceStatus.md)
  - [Reporting.Status](docs/Status.md)
- - [Reporting.UserDetail](docs/UserDetail.md)
 
 
 ## Documentation for Authorization

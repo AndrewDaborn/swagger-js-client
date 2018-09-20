@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject from '../model/InlineObject';
+import Credentials from '../model/Credentials';
 import JwtToken from '../model/JwtToken';
 
 /**
@@ -38,13 +38,16 @@ export default class AuthenticationApi {
 
     /**
      * Create a session for a user
-     * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject} opts.inlineObject 
+     * @param {module:model/Credentials} credentials Credentials to authenticate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/JwtToken} and HTTP response
      */
-    sessionPostWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['inlineObject'];
+    sessionPostWithHttpInfo(credentials) {
+      let postBody = credentials;
+
+      // verify the required parameter 'credentials' is set
+      if (credentials === undefined || credentials === null) {
+        throw new Error("Missing the required parameter 'credentials' when calling sessionPost");
+      }
 
 
       let pathParams = {
@@ -70,12 +73,11 @@ export default class AuthenticationApi {
 
     /**
      * Create a session for a user
-     * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject} opts.inlineObject 
+     * @param {module:model/Credentials} credentials Credentials to authenticate
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/JwtToken}
      */
-    sessionPost(opts) {
-      return this.sessionPostWithHttpInfo(opts)
+    sessionPost(credentials) {
+      return this.sessionPostWithHttpInfo(credentials)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
