@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Reporting.IGApi();
+    instance = new Reporting.DocumentFilter();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,19 @@
       object[property] = value;
   }
 
-  describe('IGApi', function() {
-    describe('igDocumentsIdMatchesGet', function() {
-      it('should call igDocumentsIdMatchesGet successfully', function(done) {
-        //uncomment below and update the code to test igDocumentsIdMatchesGet
-        //instance.igDocumentsIdMatchesGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DocumentFilter', function() {
+    it('should create an instance of DocumentFilter', function() {
+      // uncomment below and update the code to test DocumentFilter
+      //var instane = new Reporting.DocumentFilter();
+      //expect(instance).to.be.a(Reporting.DocumentFilter);
     });
-    describe('igDocumentsPost', function() {
-      it('should call igDocumentsPost successfully', function(done) {
-        //uncomment below and update the code to test igDocumentsPost
-        //instance.igDocumentsPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property documentName (base name: "documentName")', function() {
+      // uncomment below and update the code to test the property documentName
+      //var instane = new Reporting.DocumentFilter();
+      //expect(instance).to.be();
     });
-    describe('igUsersIdActiveDocumentsGet', function() {
-      it('should call igUsersIdActiveDocumentsGet successfully', function(done) {
-        //uncomment below and update the code to test igUsersIdActiveDocumentsGet
-        //instance.igUsersIdActiveDocumentsGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

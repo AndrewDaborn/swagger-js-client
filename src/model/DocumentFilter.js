@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The JwtToken model module.
- * @module model/JwtToken
+ * The DocumentFilter model module.
+ * @module model/DocumentFilter
  * @version 1.0.0
  */
-class JwtToken {
+class DocumentFilter {
     /**
-     * Constructs a new <code>JwtToken</code>.
-     * @alias module:model/JwtToken
+     * Constructs a new <code>DocumentFilter</code>.
+     * @alias module:model/DocumentFilter
      */
     constructor() { 
         
-        JwtToken.initialize(this);
+        DocumentFilter.initialize(this);
     }
 
     /**
@@ -37,18 +37,18 @@ class JwtToken {
     }
 
     /**
-     * Constructs a <code>JwtToken</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DocumentFilter</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JwtToken} obj Optional instance to populate.
-     * @return {module:model/JwtToken} The populated <code>JwtToken</code> instance.
+     * @param {module:model/DocumentFilter} obj Optional instance to populate.
+     * @return {module:model/DocumentFilter} The populated <code>DocumentFilter</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JwtToken();
+            obj = obj || new DocumentFilter();
 
-            if (data.hasOwnProperty('token')) {
-                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+            if (data.hasOwnProperty('documentName')) {
+                obj['documentName'] = ApiClient.convertToType(data['documentName'], 'String');
             }
         }
         return obj;
@@ -58,14 +58,14 @@ class JwtToken {
 }
 
 /**
- * @member {String} token
+ * @member {String} documentName
  */
-JwtToken.prototype['token'] = undefined;
+DocumentFilter.prototype['documentName'] = undefined;
 
 
 
 
 
 
-export default JwtToken;
+export default DocumentFilter;
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Reporting.IGApi();
+    instance = new Reporting.DocumentDetail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,37 +47,25 @@
       object[property] = value;
   }
 
-  describe('IGApi', function() {
-    describe('igDocumentsIdMatchesGet', function() {
-      it('should call igDocumentsIdMatchesGet successfully', function(done) {
-        //uncomment below and update the code to test igDocumentsIdMatchesGet
-        //instance.igDocumentsIdMatchesGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DocumentDetail', function() {
+    it('should create an instance of DocumentDetail', function() {
+      // uncomment below and update the code to test DocumentDetail
+      //var instane = new Reporting.DocumentDetail();
+      //expect(instance).to.be.a(Reporting.DocumentDetail);
     });
-    describe('igDocumentsPost', function() {
-      it('should call igDocumentsPost successfully', function(done) {
-        //uncomment below and update the code to test igDocumentsPost
-        //instance.igDocumentsPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property registeredDocument (base name: "registeredDocument")', function() {
+      // uncomment below and update the code to test the property registeredDocument
+      //var instane = new Reporting.DocumentDetail();
+      //expect(instance).to.be();
     });
-    describe('igUsersIdActiveDocumentsGet', function() {
-      it('should call igUsersIdActiveDocumentsGet successfully', function(done) {
-        //uncomment below and update the code to test igUsersIdActiveDocumentsGet
-        //instance.igUsersIdActiveDocumentsGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property documentMatches (base name: "documentMatches")', function() {
+      // uncomment below and update the code to test the property documentMatches
+      //var instane = new Reporting.DocumentDetail();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

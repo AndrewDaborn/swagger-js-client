@@ -1,4 +1,4 @@
-# Reporting.ActiveDocument
+# Reporting.RegisteredDocument
 
 ## Properties
 Name | Type | Description | Notes

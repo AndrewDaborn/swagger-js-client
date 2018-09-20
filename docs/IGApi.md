@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost:10210/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**igDocumentsIdMatchesGet**](IGApi.md#igDocumentsIdMatchesGet) | **GET** /ig/documents/{id}/matches | 
+[**igDocumentsPost**](IGApi.md#igDocumentsPost) | **POST** /ig/documents | 
 [**igUsersIdActiveDocumentsGet**](IGApi.md#igUsersIdActiveDocumentsGet) | **GET** /ig/users/{id}/activeDocuments | 
 
 
@@ -18,16 +19,16 @@ Retrieves the list of matches for a chosen document
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.IGApi();
-var id = 56; // Number | The document id to get matches for
-var opts = {
+let apiInstance = new Reporting.IGApi();
+let id = 56; // Number | The document id to get matches for
+let opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.igDocumentsIdMatchesGet(id, opts).then(function(data) {
+apiInstance.igDocumentsIdMatchesGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -53,26 +54,69 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="igUsersIdActiveDocumentsGet"></a>
-# **igUsersIdActiveDocumentsGet**
-> [ActiveDocument] igUsersIdActiveDocumentsGet(id, opts)
+<a name="igDocumentsPost"></a>
+# **igDocumentsPost**
+> [DocumentDetail] igDocumentsPost(opts)
 
 
-
-Retrieves document activity for a specific user&#39;s registered documents
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.IGApi();
-var id = 56; // Number | User to select documents for
-var opts = {
+let apiInstance = new Reporting.IGApi();
+let opts = {
+  'authorization': "authorization_example", // String | 
+  'documentFilter': new Reporting.DocumentFilter() // DocumentFilter | Provides filters for querying documents
+};
+apiInstance.igDocumentsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **String**|  | [optional] 
+ **documentFilter** | [**DocumentFilter**](DocumentFilter.md)| Provides filters for querying documents | [optional] 
+
+### Return type
+
+[**[DocumentDetail]**](DocumentDetail.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="igUsersIdActiveDocumentsGet"></a>
+# **igUsersIdActiveDocumentsGet**
+> [RegisteredDocument] igUsersIdActiveDocumentsGet(id, opts)
+
+
+
+Retrieves a specific user&#39;s registered documents
+
+### Example
+```javascript
+import Reporting from 'reporting';
+
+let apiInstance = new Reporting.IGApi();
+let id = 56; // Number | User to select documents for
+let opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.igUsersIdActiveDocumentsGet(id, opts).then(function(data) {
+apiInstance.igUsersIdActiveDocumentsGet(id, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
@@ -87,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ActiveDocument]**](ActiveDocument.md)
+[**[RegisteredDocument]**](RegisteredDocument.md)
 
 ### Authorization
 

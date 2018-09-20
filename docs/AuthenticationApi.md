@@ -17,15 +17,15 @@ Create a session for a user
 
 ### Example
 ```javascript
-var Reporting = require('reporting');
+import Reporting from 'reporting';
 
-var apiInstance = new Reporting.AuthenticationApi();
-var opts = {
+let apiInstance = new Reporting.AuthenticationApi();
+let opts = {
   'inlineObject': new Reporting.InlineObject() // InlineObject | 
 };
-apiInstance.sessionPost(opts).then(function(data) {
+apiInstance.sessionPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
+}, (error) => {
   console.error(error);
 });
 
